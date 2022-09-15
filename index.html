@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css"/>
+   <!-- <script src="searchBar.js"> defer</script>-->
 <meta charset="utf-8">
 <title>Justin d'Ailly Pokedex</title>
 <meta name="description" content="">
@@ -14,7 +15,14 @@
 
 <div class="two-col">
     <div class="col1">
-        <input id="field1" name="field1" type="text"  placeholder="Search pokemon number">
+        <div>
+            <input id="pokemon_name"  name="pokemon_name" type="text" maxlength = "20"
+          placeholder="Search pokemon number">   
+            <button type="submit">Submit</button> 
+        </div>
+        
+     <!--   <input id="pokemon_name" onkeyup="search_pokemon_name()" type="text"
+        name="pokemon_name" placeholder="Search pokemon..">-->
     </div>
 
     <div class="col2">
@@ -22,11 +30,62 @@
     </div>
 </div>
 
+<!--
+<ul>
+    <li>
+        <table>
+            <tr>
+                <td class="pokemon">
+                    <img src="images/1.png" width="125" height="125" alt="">
+                    <p>001 Bulbasuar</p>
+                </td>
+
+                <td>
+                    <img src="images/2.png" width="125" height="125" alt=""> 
+                    <p>002 ivysaur </p> 
+                </td>
+
+                <td>
+                    <img src="images/3.png" width="125" height="125" alt=""> 
+                    <p>003 venasaur</p>
+                </td>
+            </tr>
+        </table>
+    </li>
+</ul>
+-->
+
+<ul class="pokedex">
+    <li class = "pokemon">
+       <div>
+            <img src="images/1.png" width="125" height="125" alt="">
+            <p>001 Bulbasuar</p>
+       </div>
+    </li>
+    <li class = "pokemon">
+        <div>
+            <img src="images/2.png" width="125" height="125" alt=""> 
+            <p>002 ivysaur </p> 
+        </div>
+
+    </li>
+    <li class = "pokemon">
+        <div>
+            <img src="images/3.png" width="125" height="125" alt=""> 
+            <p>003 venasaur</p>
+        </div>
+    </li>
+
+</ul>
+
 
 
 
 
 
 <!-- Embedded JavaScript go here -->
+<script src="searchBar.js"></script>
+
+
 </body>
 </html>

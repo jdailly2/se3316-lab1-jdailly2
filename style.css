@@ -2,13 +2,20 @@ h1 {
     text-align: center;
   
 }
+input[type=text] {
+    width: 100%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+ }
+
+
 
 .two-col {
     overflow: hidden;/* Makes this div contain its floats */
 }
 
 .two-col .col1 {
-    margin-left: 100px;
+    margin-left: 50px;
 }
 .two-col .col2 {
     width: 49%;
@@ -25,3 +32,32 @@ h1 {
 .two-col label {
     display: block;
 }
+
+li {
+    list-style: none;
+  }
+  li::before {
+    content: '';
+    display: inline-block;
+   
+    width: 50px;
+   
+  }
+  img {
+    border: 5px solid #555;
+  }
+  p{
+    
+  }
+
+.pokedex{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  text-align: center;
+}
+/*
+.pokemon{
+    display: grid;    
+   } 
+   */
