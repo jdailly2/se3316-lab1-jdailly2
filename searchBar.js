@@ -23,15 +23,15 @@ function search_pokemon_name() {
 
 function allLetter(inputtxt)
   {
-    let input = document.getElementById('pokemonName').value
-   var letters = /^[A-Za-z]+$/;
-   if(input.value.match(letters))
+    var input = document.getElementById('pokemonName').value
+   var letters = /^[a-zA-z]+$/;
+   console.log(letters);
+   if(/^[a-zA-Z]+$/.test(input))
      {
       return true;
      }
    else
      {
-     alert("message");
-     return false;
+        document.getElementById('pokemonName').value =  input.slice(0, -1);
      }
   }
