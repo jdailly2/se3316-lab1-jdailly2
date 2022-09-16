@@ -1,13 +1,22 @@
 function search_pokemon_name() {
-    let input = document.getElementById('pokemon_name').value
+    let input = document.getElementById('pokemonName').value
     input=input.toLowerCase();
-    let x = document.getElementsByClassName('pokemon');
+    let x = document.getElementsByClassName('pokemon name');//returns an array of all the pokemons names
+    const pokemon_list = [];
+    let counter = 0;
     for (i = 0; i < x.length; i++) { 
+        console.log(x[i]);
+        console.log("here");
+        
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
+
         }
         else {
-            x[i].style.display="list-item";                 
+            pokemon_list[counter] = x[i].innerHTML;
+            counter++;               
         }
+    }
+    if(counter>0){
+    alert(pokemon_list);
     }
 }

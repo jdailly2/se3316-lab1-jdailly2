@@ -3,7 +3,7 @@ h1 {
   
 }
 input[type=text] {
-    width: 100%;
+   /* width: 100%;*/
     -webkit-transition: width 0.15s ease-in-out;
     transition: width 0.15s ease-in-out;
  }

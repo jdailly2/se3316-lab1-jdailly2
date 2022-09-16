@@ -16,9 +16,9 @@
 <div class="two-col">
     <div class="col1">
         <div>
-            <input id="pokemon_name"  name="pokemon_name" type="text" maxlength = "20"
-          placeholder="Search pokemon number">   
-            <button type="submit">Submit</button> 
+            <input id="pokemonName"  name="pokemonName" type="text" maxlength = "20"
+          placeholder="Search pokemon name">   
+            <button type="submit" onclick="search_pokemon_name()" >Search</button> 
         </div>
         
      <!--   <input id="pokemon_name" onkeyup="search_pokemon_name()" type="text"
@@ -59,20 +59,23 @@
     <li class = "pokemon">
        <div>
             <img src="images/1.png" width="125" height="125" alt="">
-            <p>001 Bulbasuar</p>
+            <p>001</p>
+            <p class = "pokemon name">Bulbasuar</p>          
        </div>
     </li>
     <li class = "pokemon">
         <div>
             <img src="images/2.png" width="125" height="125" alt=""> 
-            <p>002 ivysaur </p> 
+            <p>002</p>
+            <p class = "pokemon name">iveysaur</p> 
         </div>
 
     </li>
     <li class = "pokemon">
         <div>
             <img src="images/3.png" width="125" height="125" alt=""> 
-            <p>003 venasaur</p>
+            <p>003</p>
+            <p class = "pokemon name">venasaur</p>
         </div>
     </li>
 
