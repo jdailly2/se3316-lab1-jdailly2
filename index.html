@@ -24,7 +24,11 @@
     </div>
 
     <div class="col2">
-        <input id="field2" name="field2" type="text"  placeholder="Search pokemon name">
+        <input id="pokemonNumber"  name="pokemonNumber" type="text" maxlength = "20"
+        placeholder="Search pokemon number" oninput="allLetter()">   
+          <button type="submit" onclick="search_pokemon_number()" >Search</button> 
+
+       <!-- <input id="field2" name="field2" type="text"  placeholder="Search pokemon name"> -->
     </div>
 </div>
 
@@ -33,14 +37,14 @@
        <div>
             <p class = "pokemon_name">Bulbasuar</p>
             <img src="images/1.png" width="125" height = "125" alt="" class = "bulb">
-            <p>001</p>      
+            <p class = "pokemon_num">001</p>      
        </div>
     </li>
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">iveysaur</p> 
             <img src="images/2.png" width="125" height="125" alt="" class = "bulb"> 
-            <p>002</p>
+            <p class = "pokemon_num">002</p>
         </div>
 
     </li>
@@ -48,7 +52,7 @@
         <div>
             <p class = "pokemon_name">venasaur</p>
             <img src="images/3.png" width="125" height="125" alt="" class = "bulb"> 
-            <p>003</p>
+            <p class = "pokemon_num">003</p>
             
         </div>
     </li>
@@ -57,7 +61,7 @@
         <div>
             <p class = "pokemon_name">charmander</p>
             <img src="images/4.png" width="125" height="125" alt="" class = "char"> 
-            <p>004</p>
+            <p class = "pokemon_num">004</p>
             
         </div>
     </li>
@@ -66,7 +70,7 @@
         <div>
             <p class = "pokemon_name">chameleon</p>
             <img src="images/5.png" width="125" height="125" alt="" class = "char"> 
-            <p>005</p>
+            <p class = "pokemon_num">005</p>
            
         </div>
     </li>
@@ -75,7 +79,7 @@
         <div>
             <p class = "pokemon_name">Charzard</p>
             <img src="images/6.png" width="125" height="125" alt="" class = "char"> 
-            <p>006</p>
+            <p class = "pokemon_num">006</p>
         </div>
     </li>
 
@@ -83,7 +87,7 @@
         <div>
             <p class = "pokemon_name">Squirtal</p>
             <img src="images/7.png" width="125" height="125" alt="" class = "squ"> 
-            <p>007</p>
+            <p class = "pokemon_num">007</p>
         </div>
     </li>
 
@@ -91,7 +95,7 @@
         <div>
             <p class = "pokemon_name">Wartortle</p>
             <img src="images/8.png" width="125" height="125" alt="" class = "squ"> 
-            <p>008</p>
+            <p class = "pokemon_num">008</p>
         </div>
     </li>
 
@@ -99,7 +103,7 @@
         <div>
             <p class = "pokemon_name">Blastoise</p>
             <img src="images/9.png" width="125" height="125" alt="" class = "squ"> 
-            <p>009</p>
+            <p class = "pokemon_num">009</p>
         </div>
     </li>
 
