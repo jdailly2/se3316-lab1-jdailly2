@@ -20,3 +20,18 @@ function search_pokemon_name() {
     alert(pokemon_list);
     }
 }
+
+function allLetter(inputtxt)
+  {
+    let input = document.getElementById('pokemonName').value
+   var letters = /^[A-Za-z]+$/;
+   if(input.value.match(letters))
+     {
+      return true;
+     }
+   else
+     {
+     alert("message");
+     return false;
+     }
+  }

@@ -17,7 +17,7 @@
     <div class="col1">
         <div>
             <input id="pokemonName"  name="pokemonName" type="text" maxlength = "20"
-          placeholder="Search pokemon name">   
+          placeholder="Search pokemon name" oninput="allLetter()">   
             <button type="submit" onclick="search_pokemon_name()" >Search</button> 
         </div>
         
@@ -58,14 +58,14 @@
 <ul class="pokedex">
     <li class = "pokemon">
        <div>
-            <img src="images/1.png" width="125" height="125" alt="">
+            <img src="images/1.png" width="125" height = "125" alt="" class = "bulb">
             <p>001</p>
             <p class = "pokemon name">Bulbasuar</p>          
        </div>
     </li>
     <li class = "pokemon">
         <div>
-            <img src="images/2.png" width="125" height="125" alt=""> 
+            <img src="images/2.png" width="125" height="125" alt="" class = "bulb"> 
             <p>002</p>
             <p class = "pokemon name">iveysaur</p> 
         </div>
@@ -73,9 +73,33 @@
     </li>
     <li class = "pokemon">
         <div>
-            <img src="images/3.png" width="125" height="125" alt=""> 
+            <img src="images/3.png" width="125" height="125" alt="" class = "bulb"> 
             <p>003</p>
             <p class = "pokemon name">venasaur</p>
+        </div>
+    </li>
+
+    <li class = "pokemon">
+        <div>
+            <img src="images/4.png" width="125" height="125" alt="" class = "char"> 
+            <p>004</p>
+            <p class = "pokemon name">charmander</p>
+        </div>
+    </li>
+
+    <li class = "pokemon">
+        <div>
+            <img src="images/5.png" width="125" height="125" alt="" class = "char"> 
+            <p>005</p>
+            <p class = "pokemon name">chameleon</p>
+        </div>
+    </li>
+
+    <li class = "pokemon">
+        <div>
+            <img src="images/6.png" width="125" height="125" alt="" class = "char"> 
+            <p>006</p>
+            <p class = "pokemon name">charzard</p>
         </div>
     </li>
 
