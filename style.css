@@ -6,6 +6,7 @@ input[type=text] {
    /* width: 100%;*/
     -webkit-transition: width 0.15s ease-in-out;
     transition: width 0.15s ease-in-out;
+    border-radius: 25px;
  }
 
 
@@ -16,6 +17,7 @@ input[type=text] {
 
 .two-col .col1 {
     margin-left: 50px;
+    
 }
 .two-col .col2 {
     width: 49%;
@@ -44,19 +46,27 @@ li {
    
   }
   img {
-    border: 5px solid #555;
+    border: 5px solid rgb(4, 4, 4);
+    border-radius: 50%;
     
   }
   .bulb{
-    background-image: linear-gradient( #0fad1f,#5229a3);
+    background-image: linear-gradient( #7AC74C,#A33EA1);
    /* background-color: rgb(6, 155, 6);*/
   }
   .char{
-    background-image: linear-gradient( #ff9900, #6ec9f2);
+    background-image: linear-gradient( #EE8130, #A98FF3);
   }
   .squ{
-    background-color: #0a6eff;
+    background-color: #6390F0;
   }
+  .cat{
+background-color: #A6B91A;
+  }
+  .butter{
+    background-image: linear-gradient(#A6B91A,#A98FF3);
+  }
+
 
 .pokedex{
     display: grid;
@@ -67,10 +77,12 @@ li {
 
 
 body{
-    background-image: linear-gradient(#ccffff,#6bf6f1);
+    background-image: linear-gradient(#ffffff,#5df8f3);
   
 }
-
+button{
+    border-radius: 25px;
+}
 
 /*
 .pokemon{

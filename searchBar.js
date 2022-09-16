@@ -13,14 +13,16 @@ function search_pokemon_name() {
         }
         else {
             pokemon_list[counter] = x[i].innerHTML;
-            counter++;               
+            counter++;  
+            if(counter >4){
+                break;
+            }                  
         }
     }
     if(counter>0){
     alert(pokemon_list);
     }
 }
-
 function allLetter(inputtxt)
   {
     var input = document.getElementById('pokemonName').value
@@ -35,7 +37,6 @@ function allLetter(inputtxt)
         document.getElementById('pokemonName').value =  input.slice(0, -1);
      }
   }
-
   function search_pokemon_number() {
     let input = document.getElementById('pokemonNumber').value
    // input=input.toLowerCase();
@@ -46,16 +47,32 @@ function allLetter(inputtxt)
     for (i = 0; i < x.length; i++) { 
         console.log(x[i]);
         console.log("here");
-        
         if (!x[i].innerHTML.includes(input)) {
-
         }
         else {
             pokemon_list[counter] = y[i].innerHTML;
-            counter++;               
+            counter++;
+            if(counter >4){
+                break;
+            }               
         }
     }
     if(counter>0){
     alert(pokemon_list);
     }
 }
+
+function allNumbers(inputtxt)
+  {
+    var input = document.getElementById('pokemonNumber').value
+   var letters = /^[0-9]+$/;
+   console.log(letters);
+   if(/^[0-9]+$/.test(input))
+     {
+      return true;
+     }
+   else
+     {
+        document.getElementById('pokemonNumber').value =  input.slice(0, -1);
+     }
+  }
