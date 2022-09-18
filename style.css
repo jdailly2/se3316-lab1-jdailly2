@@ -66,6 +66,15 @@ background-color: #A6B91A;
   .butter{
     background-image: linear-gradient(#A6B91A,#A98FF3);
   }
+  .wee{
+    background-image: linear-gradient(#A6B91A,#A33EA1);
+  }
+  .pig{
+    background-image: linear-gradient(#A8A77A,#A98FF3);
+  }
+  .rat{
+    background-color: #A8A77A ;
+  }
 
 
 .pokedex{
