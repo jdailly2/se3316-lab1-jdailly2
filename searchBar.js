@@ -1,3 +1,6 @@
+//=================================
+//This function searches through the pokemons names and returns the first 5 matches
+//=================================
 function search_pokemon_name() {
     let input = document.getElementById('pokemonName').value
     input=input.toLowerCase();
@@ -23,6 +26,10 @@ function search_pokemon_name() {
     alert(pokemon_list);
     }
 }
+//=================================
+//This function takes input from the user and make sure that the user does
+//not try to enter a number
+//=================================
 function allLetter(inputtxt)
   {
     var input = document.getElementById('pokemonName').value
@@ -38,7 +45,9 @@ function allLetter(inputtxt)
      }
   }
 
-
+//=================================
+//This function searches through the pokemons numbers and returns the first 5 matches
+//=================================
   function search_pokemon_number() {
     let input = document.getElementById('pokemonNumber').value
    // input=input.toLowerCase();
@@ -63,7 +72,10 @@ function allLetter(inputtxt)
     alert(pokemon_list);
     }
 }
-
+//=================================
+//This function takes input from the user and make sure that the user does
+//not try to enter a letter or a number above 20
+//=================================
 function allNumbers(inputtxt)
   {
     var input = document.getElementById('pokemonNumber').value
