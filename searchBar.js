@@ -2,17 +2,17 @@ function search_pokemon_name() {
     let input = document.getElementById('pokemonName').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('pokemon_name');//returns an array of all the pokemons names
+    let des = document.getElementsByClassName('description')
     const pokemon_list = [];
+    const pokemon_des = [];
     let counter = 0;
-    for (i = 0; i < x.length; i++) { 
-        console.log(x[i]);
-        console.log("here");
-        
+    for (i = 0; i < x.length; i++) {   
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
 
         }
         else {
-            pokemon_list[counter] = x[i].innerHTML;
+            pokemon_list[counter] = x[i].innerHTML + "  " + des[i].innerHTML;
+           
             counter++;  
             if(counter >4){
                 break;
@@ -37,20 +37,22 @@ function allLetter(inputtxt)
         document.getElementById('pokemonName').value =  input.slice(0, -1);
      }
   }
+
+
   function search_pokemon_number() {
     let input = document.getElementById('pokemonNumber').value
    // input=input.toLowerCase();
     let x = document.getElementsByClassName('pokemon_num');//returns an array of all the pokemons numbers
-    let y = document.getElementsByClassName('pokemon_name')
+    let y = document.getElementsByClassName('pokemon_name');
+    let des = document.getElementsByClassName('description');
     const pokemon_list = [];
+    //const pokemon_des = [];
     let counter = 0;
     for (i = 0; i < x.length; i++) { 
-        console.log(x[i]);
-        console.log("here");
         if (!x[i].innerHTML.includes(input)) {
         }
         else {
-            pokemon_list[counter] = y[i].innerHTML;
+            pokemon_list[counter] = y[i].innerHTML + "  " + des[i].innerHTML;
             counter++;
             if(counter >4){
                 break;
@@ -66,13 +68,18 @@ function allNumbers(inputtxt)
   {
     var input = document.getElementById('pokemonNumber').value
    var letters = /^[0-9]+$/;
-   console.log(letters);
+   
    if(/^[0-9]+$/.test(input))
      {
-      return true;
+        if(inputtxt>0 && inputtxt<20){
+
+            return true;
+        }
+    
      }
    else
      {
+    
         document.getElementById('pokemonNumber').value =  input.slice(0, -1);
      }
   }
