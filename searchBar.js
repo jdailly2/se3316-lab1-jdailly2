@@ -7,7 +7,6 @@ function search_pokemon_name() {
     let x = document.getElementsByClassName('pokemon_name');//returns an array of all the pokemons names
     let des = document.getElementsByClassName('description')
     const pokemon_list = [];
-    const pokemon_des = [];
     let counter = 0;
     for (i = 0; i < x.length; i++) {   
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -33,8 +32,7 @@ function search_pokemon_name() {
 function allLetter(inputtxt)
   {
     var input = document.getElementById('pokemonName').value
-   var letters = /^[a-zA-z]+$/;
-   console.log(letters);
+
    if(/^[a-zA-Z]+$/.test(input))
      {
       return true;
@@ -50,12 +48,11 @@ function allLetter(inputtxt)
 //=================================
   function search_pokemon_number() {
     let input = document.getElementById('pokemonNumber').value
-   // input=input.toLowerCase();
+  
     let x = document.getElementsByClassName('pokemon_num');//returns an array of all the pokemons numbers
     let y = document.getElementsByClassName('pokemon_name');
     let des = document.getElementsByClassName('description');
     const pokemon_list = [];
-    //const pokemon_des = [];
     let counter = 0;
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.includes(input)) {
