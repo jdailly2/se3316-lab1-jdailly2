@@ -13,12 +13,14 @@
 <!-- Place your content here -->
 <h1>Justin d'Ailly Pokedex</h1>
 
+
+
 <div class="two-col">
     <div class="col1">
         <div>
             <input id="pokemonName"  name="pokemonName" type="text" maxlength = "20"
-          placeholder="Search pokemon name" oninput="allLetter()">   
-            <button type="submit" onclick="search_pokemon_name()" >Search</button> 
+          placeholder="Search pokemon name" oninput="search_pokemon_name()">   
+            <button type="submit" onclick="Alert_fun()" >Search</button> 
         </div>
         
     </div>
@@ -32,11 +34,22 @@
     </div>
 </div>
 
+<div id = "popUp">
+
+    <li id = popUpList>
+
+
+
+    </li>
+
+
+</div>
+
 <ul class="pokedex">
     <li class = "pokemon">
        <div>
-            <p class = "pokemon_name">Bulbasuar</p>
-            <img src="images/1.png" alt="" class = "bulb">
+            <p class = "pokemon_name">Bulbasaur</p>
+            <img src="images/1.png" alt="" class = "bulb" id = 'photo'>
             <p class = "pokemon_num">001</p>
             <p hidden class = "description">Type: grass/poison,Rarity: 4,Catchable: wild,Region: Global
             </p>
@@ -49,7 +62,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">iveysaur</p> 
-            <img src="images/2.png" alt="" class = "bulb"> 
+            <img src="images/2.png" alt="" class = "bulb" id = 'photo'> 
             <p class = "pokemon_num">002</p>
             <p hidden class = "description">Type: grass/poison,Rarity: 5,Catchable: wild,Region: Global
             </p>
@@ -59,7 +72,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">venasaur</p>
-            <img src="images/3.png" alt="" class = "bulb"> 
+            <img src="images/3.png" alt="" class = "bulb" id = 'photo'> 
             <p class = "pokemon_num">003</p>
             <p hidden class = "description">Type: grass/poison,Rarity: 6,Catchable: wild,Region: Global 
             </p>
@@ -70,7 +83,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">charmander</p>
-            <img src="images/4.png" alt="" class = "char"> 
+            <img src="images/4.png" alt="" class = "char" id = 'photo'> 
             <p class = "pokemon_num">004</p>
             <p hidden class = "description">Type: Fire/Flying,Rarity: 4,Catchable: wild,Region: Global
             </p>
@@ -80,7 +93,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">chameleon</p>
-            <img src="images/5.png" alt="" class = "char"> 
+            <img src="images/5.png" alt="" class = "char" id = 'photo'> 
             <p class = "pokemon_num">005</p>
             <p hidden class = "description">Type: Fire/Flying,Rarity: 5,Catchable: wild,Region: Global
             </p>
@@ -90,7 +103,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Charzard</p>
-            <img src="images/6.png" alt="" class = "char"> 
+            <img src="images/6.png" alt="" class = "char" id = 'photo'> 
             <p class = "pokemon_num">006</p>
             <p hidden class = "description">Type: Fire/Flying,Rarity: 6,Catchable: wild,Region: Global
                 </p>
@@ -100,7 +113,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Squirtal</p>
-            <img src="images/7.png" alt="" class = "squ"> 
+            <img src="images/7.png" alt="" class = "squ" id = 'photo'> 
             <p class = "pokemon_num">007</p>
             <p hidden class = "description">Type: Water,Rarity: 4,Catchable: wild,Region: Global
             </p>
@@ -110,7 +123,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Wartortle</p>
-            <img src="images/8.png" alt="" class = "squ"> 
+            <img src="images/8.png" alt="" class = "squ" id = 'photo'> 
             <p class = "pokemon_num">008</p>
             <p hidden class = "description">Type: Water,Rarity: 5,Catchable: wild,Region: Global
             </p>
@@ -120,7 +133,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Blastoise</p>
-            <img src="images/9.png"  alt="" class = "squ"> 
+            <img src="images/9.png"  alt="" class = "squ" id = 'photo'> 
             <p class = "pokemon_num">009</p>
             <p hidden class = "description">Type: Water,Rarity: 6,Catchable: wild,Region: Global
             </p>
@@ -130,7 +143,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Caterpie</p>
-            <img src="images/10.png"  alt="" class = "cat"> 
+            <img src="images/10.png"  alt="" class = "cat" id = 'photo'> 
             <p class = "pokemon_num">010</p>
             <p hidden class = "description">Type: Bug,Rarity: 1,Catchable: wild,Region: Global
             </p>
@@ -140,7 +153,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Metapod</p>
-            <img src="images/11.png"  alt="" class = "cat"> 
+            <img src="images/11.png"  alt="" class = "cat" id = 'photo'> 
             <p class = "pokemon_num">011</p>
             <p hidden class = "description">Type: Bug,Rarity: 3,Catchable: wild,Region: Global
             </p>
@@ -150,7 +163,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Butterfree</p>
-            <img src="images/12.png"  alt="" class = "butter"> 
+            <img src="images/12.png"  alt="" class = "butter" id = 'photo'> 
             <p class = "pokemon_num">012</p>
             <p hidden class = "description">Type: Bug/Flying,Rarity: 4,Catchable: wild,Region: Global
             </p>
@@ -160,7 +173,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Weedle</p>
-            <img src="images/13.png" alt="" class = "wee"> 
+            <img src="images/13.png" alt="" class = "wee" id = 'photo'> 
             <p class = "pokemon_num">013</p>
             <p hidden class = "description">Type: Bug/Poison,Rarity: 1,Catchable: wild,Region: Global
             </p>
@@ -170,7 +183,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Kakuna</p>
-            <img src="images/14.png"  alt="" class = "wee"> 
+            <img src="images/14.png"  alt="" class = "wee" id = 'photo'> 
             <p class = "pokemon_num">014</p>
             <p hidden class = "description">Type: Bug/Poison,Rarity: 3,Catchable: wild,Region: Global
             </p>
@@ -180,7 +193,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Beedrill</p>
-            <img src="images/15.png" alt="" class = "wee"> 
+            <img src="images/15.png" alt="" class = "wee" id = 'photo'> 
             <p class = "pokemon_num">015</p>
             <p hidden class = "description">Type: Bug/Poison,Rarity: 4,Catchable: wild,Region: Global
             </p>
@@ -190,7 +203,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Pidgey</p>
-            <img src="images/16.png"  alt="" class = "pig"> 
+            <img src="images/16.png"  alt="" class = "pig" id = 'photo'> 
             <p class = "pokemon_num">016</p>
             <p hidden class = "description">Type: Normal/Flying,Rarity: 1,Catchable: wild,Region: Global
             </p>
@@ -200,7 +213,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Pidgetto</p>
-            <img src="images/17.png"  alt="" class = "pig"> 
+            <img src="images/17.png"  alt="" class = "pig" id = 'photo'> 
             <p class = "pokemon_num">017</p>
             <p hidden class = "description">Type: Normal/Flying,Rarity: 3,Catchable: wild,Region: Global
             </p>
@@ -210,7 +223,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Pidgeot</p>
-            <img src="images/18.png" alt="" class = "pig"> 
+            <img src="images/18.png" alt="" class = "pig" id = 'photo'> 
             <p class = "pokemon_num">018</p>
             <p hidden class = "description">Type: Normal/Flying,Rarity: 4,Catchable: wild,Region: Global
             </p>
@@ -220,7 +233,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Rattata</p>
-            <img src="images/19.png" alt="" class = "rat"> 
+            <img src="images/19.png" alt="" class = "rat" id = 'photo'> 
             <p class = "pokemon_num">019</p>
             <p hidden class = "description">Type: Normal,Rarity: 1,Catchable: wild,Region: Global
             </p>
@@ -230,7 +243,7 @@
     <li class = "pokemon">
         <div>
             <p class = "pokemon_name">Raticate</p>
-            <img src="images/20.png"  alt="" class = "rat"> 
+            <img src="images/20.png"  alt="" class = "rat" id = 'photo'> 
             <p class = "pokemon_num">020</p>
             <p hidden class = "description">Type: Normal,Rarity: 4,Catchable: wild,Region: Global
             </p>

@@ -1,28 +1,47 @@
 //=================================
 //This function searches through the pokemons names and returns the first 5 matches
 //=================================
-function search_pokemon_name() {
+const pokemon_list = [];
+
+function search_pokemon_name(inputtxt) {
     let input = document.getElementById('pokemonName').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('pokemon_name');//returns an array of all the pokemons names
     let des = document.getElementsByClassName('description')
-    const pokemon_list = [];
+    let pic = document.getElementsByClassName('pokemon');
+    let num = document.getElementsByClassName('pokemon_num');
+
+    
     let counter = 0;
+    
+    let picture = document.getElementsByTagName('img')
+    var img = document.createElement('img')
+    const box=document.getElementById('popUpList')
+    console.log(picture)
+       if(allLetter(inputtxt)){
     for (i = 0; i < x.length; i++) {   
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-
+          
         }
         else {
             pokemon_list[counter] = x[i].innerHTML + "  " + des[i].innerHTML;
-           
+           // x[i].style.visibility = 'hidden';
+           // num[i].style.visibility = 'hidden';
+
+            li = pic[i].innerHTML ;
+            img = picture[i].cloneNode(true);
+            box.appendChild(img)
+            box.append(li)
+            
             counter++;  
-            if(counter >4){
-                break;
-            }                  
+           // if(counter >4){
+           //     break;
+          //  }                  
         }
     }
+  }
     if(counter>0){
-    alert(pokemon_list);
+    return(pokemon_list);
     }
 }
 //=================================
@@ -31,6 +50,7 @@ function search_pokemon_name() {
 //=================================
 function allLetter(inputtxt)
   {
+
     var input = document.getElementById('pokemonName').value
 
    if(/^[a-zA-Z]+$/.test(input))
@@ -41,6 +61,11 @@ function allLetter(inputtxt)
      {
         document.getElementById('pokemonName').value =  input.slice(0, -1);
      }
+  }
+
+  function Alert_fun() {
+
+alert(pokemon_list);
   }
 
 //=================================
