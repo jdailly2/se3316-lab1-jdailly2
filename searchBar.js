@@ -10,7 +10,7 @@ function search_pokemon_name(inputtxt) {
     let des = document.getElementsByClassName('description')
     let pic = document.getElementsByClassName('pokemon');
     let num = document.getElementsByClassName('pokemon_num');
-
+    let p = document.createElement('p');
     
     let counter = 0;
     
@@ -20,7 +20,7 @@ function search_pokemon_name(inputtxt) {
     const box=document.getElementById('popUpList')
     const allImages = [];
 
-    
+
     
        if(allLetter(inputtxt)){
     for (i = 0; i < x.length; i++) {   
@@ -29,26 +29,20 @@ function search_pokemon_name(inputtxt) {
         }
         else {
             pokemon_list[counter] = x[i].innerHTML + "  " + des[i].innerHTML;
-           // x[i].style.visibility = 'hidden';
-           // num[i].style.visibility = 'hidden';
-            
             
             allImages[counter] = picture[i].cloneNode(true);
-           
-            
-            
-            counter++;  
-           // if(counter >4){
-           //     break;
-          //  }                  
+            counter++;                 
         }
     }
   }
 for(j=0; j<allImages.length;j++){
-  li = pic[j].innerHTML ;
+  p = pokemon_list[j] ;
 img = allImages[j]
-box.appendChild(img)
 box.append(li)
+li.append(p)
+//li.append(img)
+li.appendChild(img)
+
 }
 
     if(counter>0){
