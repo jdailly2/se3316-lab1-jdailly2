@@ -2,19 +2,37 @@
 //This function searches through the pokemons names and returns the first 5 matches
 //=================================
 const pokemon_list = [];
-const box=document.getElementById('popUpList');
-const div = document.getElementById('popUp');
+
+
 const pokemonName = [];
+
 var universalCounter = 0;
 let counter = 0;
-var newUl = document.createElement('ul');
-const PokemonNumbers = [];
-//let div = document.createElement('div')
 
+//var newUl = document.createElement('ul');
+//newUl.id = "popUpList"
+const PokemonNumbers = [];
+
+
+const allList = document.getElementById("allList")
+var oldUl = document.querySelector(".pokedex")
+var container = document.createElement('div');
+container.id = "popUp";
+var searchList = document.createElement('ul');
+searchList.id = "popUpList";
+document.body.appendChild(container);
+
+allList.insertBefore(container,oldUl);
+container.appendChild(searchList);
+
+
+const box=document.getElementById('popUpList');
+const div = document.getElementById('popUp');
+
+//=====================================================
 function search_pokemon_name(inputtxt) {
 
-  //if(universalCounter = 0){
-  //}
+  
   
   //console.log(pokemon_list)
 
