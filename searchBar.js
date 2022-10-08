@@ -10,7 +10,11 @@ let counter = 0;
 var newUl = document.createElement('ul');
 const PokemonNumbers = [];
 //let div = document.createElement('div')
+
 function search_pokemon_name(inputtxt) {
+
+  //if(universalCounter = 0){
+  //}
   
   //console.log(pokemon_list)
 
@@ -152,7 +156,7 @@ alert(pokemon_list);
     const allImages = [];
    
    
-    removeSearch()
+    removeSearch();
   
 
 counter = 0;
@@ -161,7 +165,6 @@ counter = 0;
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.includes(input)) {
           
-      
         }
         else {
             pokemon_list[counter] = y[i].innerHTML + "  " + des[i].innerHTML;
@@ -172,6 +175,7 @@ counter = 0;
         }
        
     }
+  }
     for(j=0; j<allImages.length;j++){
    
       var li = document.createElement('li');
@@ -186,7 +190,12 @@ counter = 0;
       li.appendChild(img);
  
 }
+if(counter>0){
+  return(pokemon_list);
   }
+
+  
+ 
 }
 //=================================
 //This function takes input from the user and make sure that the user does
@@ -200,7 +209,7 @@ function allNumbers(inputtxt)
    if(/^[0-9]+$/.test(input))
      {
         if(inputtxt>0 && inputtxt<20){
-
+        console.log("test function")
             return true;
         }
     
@@ -209,5 +218,6 @@ function allNumbers(inputtxt)
      {
     
         document.getElementById('pokemonNumber').value =  input.slice(0, -1);
+        return true;
      }
   }
