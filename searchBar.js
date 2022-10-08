@@ -2,53 +2,116 @@
 //This function searches through the pokemons names and returns the first 5 matches
 //=================================
 const pokemon_list = [];
-
+const box=document.getElementById('popUpList')
+const div = document.getElementById('popUp')
+const pokemonName = [];
+var universalCounter = 0;
+let counter = 0;
+var newUl = document.createElement('ul')
+//let div = document.createElement('div')
 function search_pokemon_name(inputtxt) {
+  
+  //console.log(pokemon_list)
+
     let input = document.getElementById('pokemonName').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('pokemon_name');//returns an array of all the pokemons names
     let des = document.getElementsByClassName('description')
-    let pic = document.getElementsByClassName('pokemon');
-    let num = document.getElementsByClassName('pokemon_num');
-    let p = document.createElement('p');
+   // let pic = document.getElementsByClassName('pokemon');
+    //let num = document.getElementsByClassName('pokemon_num');
     
-    let counter = 0;
-    
-    let picture = document.getElementsByTagName('img')
+
+    let picture = document.getElementById('poki').getElementsByTagName('img')
     var img = document.createElement('img')
-    var li = document.createElement('li')
-    const box=document.getElementById('popUpList')
-    const allImages = [];
-
-
     
+   // const box=document.getElementById('popUpList')
+   
+    let p = document.createElement('p');
+    const allImages = [];
+    
+   // div.classList.add("pop");
+  // box.appendChild(div)
+
+  
+    
+     // if(universalCounter !=0 ){
+       // console.log("not deleting")
+        //li.remove(p,img)
+
+       
+     // }
+
+     removeSearch()
+     
+     
+      counter = 0;
        if(allLetter(inputtxt)){
     for (i = 0; i < x.length; i++) {   
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-          
+
+        //  for(k = 0;k<pokemonName.length;k++){
+        //if(x[i].innerHTML.toLowerCase().includes(pokemonName[k])){
+        //  console.log("this is in the for loop")
+        //  var element = document.getElementById(pokemonName[k]);
+         // element.parentNode.removeChild(element);
+        //}
+     // }
         }
         else {
             pokemon_list[counter] = x[i].innerHTML + "  " + des[i].innerHTML;
+            pokemonName[counter] = x[i].innerHTML
             
             allImages[counter] = picture[i].cloneNode(true);
             counter++;                 
         }
     }
   }
+  console.log(allImages)
 for(j=0; j<allImages.length;j++){
-  p = pokemon_list[j] ;
-img = allImages[j]
-box.append(li)
-li.append(p)
-//li.append(img)
-li.appendChild(img)
+  var li = document.createElement('li')
+  li.className = "child"
+  li.id=pokemonName[j]
+  p = pokemonName[j] 
 
+  img = allImages[j]
+
+  box.appendChild(li)
+  
+  li.append(p)
+  li.appendChild(img)
+  
+
+  
+  
+ // console.log("made it")
+ // universalCounter++;
 }
+//let el = document.querySelectorAll("img")
+//el.setAttribute("class","popUpList")
+
+
 
     if(counter>0){
     return(pokemon_list);
     }
+
+  
 }
+
+
+function removeSearch(){
+  const temp =document.querySelector('ul');
+  let children = document.querySelectorAll('.child');
+for(let c of children){
+  
+  temp.removeChild(c)
+console.log("I am here at the moment")
+}
+//temp.remove();
+//div.appendChild(newUl)
+}
+
+
 //=================================
 //This function takes input from the user and make sure that the user does
 //not try to enter a number
