@@ -1,7 +1,7 @@
 //=================================
 //This function searches through the pokemons names and returns the first 5 matches
 //=================================
-const pokemon_list = [];
+var pokemon_list = [];
 
 
 const pokemonName = [];
@@ -24,7 +24,7 @@ document.body.appendChild(container);
 
 allList.insertBefore(container,oldUl);
 container.appendChild(searchList);
-
+//container.classList.remove("popUp")
 
 const box=document.getElementById('popUpList');
 const div = document.getElementById('popUp');
@@ -40,6 +40,7 @@ function search_pokemon_name(inputtxt) {
     input=input.toLowerCase();
     let x = document.getElementsByClassName('pokemon_name');//returns an array of all the pokemons names
     let des = document.getElementsByClassName('description');
+    let y = document.getElementsByClassName('pokemon_num');
    // let pic = document.getElementsByClassName('pokemon');
     //let num = document.getElementsByClassName('pokemon_num');
     
@@ -63,7 +64,7 @@ function search_pokemon_name(inputtxt) {
 
        
      // }
-
+     container.style.border = "none";
      removeSearch();
      
      
@@ -82,7 +83,7 @@ function search_pokemon_name(inputtxt) {
         }
         else {
             pokemon_list[counter] = x[i].innerHTML + "  " + des[i].innerHTML;
-            pokemonName[counter] = x[i].innerHTML;
+            pokemonName[counter] = x[i].innerHTML +" "+ y[i].innerHTML+"  " + des[i].innerHTML; //x[i].innerHTML;
             
             allImages[counter] = picture[i].cloneNode(true);
             counter++;                 
@@ -114,8 +115,8 @@ for(j=0; j<allImages.length;j++){
 
 
 
-    if(counter>0){
-    return(pokemon_list);
+    if(counter==0){
+      container.style.border = "none";
     }
 
   
@@ -130,6 +131,7 @@ for(let c of children){
   temp.removeChild(c);
 console.log("I am here at the moment");
 }
+container.style.border = "thick solid #000000";
 }
 
 
@@ -166,7 +168,7 @@ alert(pokemon_list);
     let x = document.getElementsByClassName('pokemon_num');//returns an array of all the pokemons numbers
     let y = document.getElementsByClassName('pokemon_name');
     let des = document.getElementsByClassName('description');
-    const pokemon_list = [];
+   // const pokemon_list = [];
     let counter = 0;
     let picture = document.getElementById('poki').getElementsByTagName('img');
     var img = document.createElement('img');
@@ -186,8 +188,10 @@ counter = 0;
         }
         else {
             pokemon_list[counter] = y[i].innerHTML + "  " + des[i].innerHTML;
-            PokemonNumbers[counter] = x[i].innerHTML;
+            //PokemonNumbers[counter] = x[i].innerHTML;
+            PokemonNumbers[counter] =y[i].innerHTML+" " + x[i].innerHTML + "  " + des[i].innerHTML;
             allImages[counter] = picture[i].cloneNode(true);
+            //console.log(pokemon_list[counter])
             counter++;      
          
         }
@@ -208,9 +212,10 @@ counter = 0;
       li.appendChild(img);
  
 }
-if(counter>0){
-  return(pokemon_list);
-  }
+
+if(counter==0){
+  container.style.border = "none";
+}
 
   
  
