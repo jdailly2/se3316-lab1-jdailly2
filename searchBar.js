@@ -137,10 +137,10 @@ function allLetter(inputtxt)
      }
   }
 
-  function Alert_fun() {
+  //function Alert_fun() {
 
-alert(pokemon_list);
-  }
+//alert(pokemon_list);
+ // }
 
 //=================================
 //This function searches through the pokemons numbers and returns the first 5 matches
